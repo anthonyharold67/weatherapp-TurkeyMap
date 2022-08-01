@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 export const WeatherContext = createContext();
@@ -14,6 +14,9 @@ const WeatherContextProvider = ({ children }) => {
         console.log(data);
         setWeather(data);
     }
+    useEffect(() => {
+        getWeather('Ankara')
+      }, [])
     
     return (
         <WeatherContext.Provider value={{ weather, getWeather }}>

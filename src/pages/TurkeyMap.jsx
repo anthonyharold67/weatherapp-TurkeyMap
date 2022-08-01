@@ -13,7 +13,7 @@ const TurkeyMaps = () => {
     const handleClick = (name)=>{
         console.log(name);
         getWeather(name);
-        navigate(`/turkey-map/${name.toLowerCase()}`);
+        navigate(`/weather/${name.toLowerCase()}`);
     }
     const renderCity = (cityComponent, cityData) => ( 
         <Tooltip title={cityData.name} key={cityData.id}> 
@@ -22,9 +22,9 @@ const TurkeyMaps = () => {
       );
 
   return (
-    <div style={{backgroundColor:"#010221"}}>
-        <h3 className='text-center text-light' style={{marginBottom:"-2rem",marginTop:"5px"}} >{title}</h3>
-        <TurkeyMap customStyle={{ idleColor: "red", hoverColor: "white" }} onClick={ ({name}) => handleClick(name)} cityWrapper={renderCity} hoverable={true}
+    <div className='map'>
+        <div><h3 className='text-center text-light' style={{marginBottom:"-2rem",marginTop:"5px"}} >{title}</h3></div>
+        <TurkeyMap customStyle={{ idleColor: "red", hoverColor: "white",border:"5px" }} onClick={ ({name}) => handleClick(name)} cityWrapper={renderCity} hoverable={true}
     onHover={ ({ plateNumber, name }) => setTitle(`${plateNumber}-${name}`)} />
     </div>
   )

@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+a {
+  color:#F4E2DE;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  margin-left:0.5rem;
+}
+a:hover{
+  font-size: 1.2rem;
+  color: #F4E2DE;
+  transform: translate3d(0, 10px, 0);
+  transition: all 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.home{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.header{
+  color:#F29325;
+}
+.header button{
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.header button:hover{
+  background-color: #F29325;
+  color: #F4E2DE;
+  transform: translate3d(0, 10px, 0);
+  transition: all 0.3s ease-in-out;
+}
+.map{
+  height: 95vh;
+  /* background-color:#010221; */
+  min-height: 95vh;
 }
 
-.App-link {
-  color: #61dafb;
+.home span{
+  font-size:1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.city-list {
+  /* transform: translate(-50%); */
+  transform: translateY(100%) translateX(30%);
+
+}
+.city-list button{
+  display: flex;
+  /* place-items: center; */
+  margin: 0 50% 0 20%;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+}
+.city-list button:hover{
+  background-color: #F29325;
+  color: #F4E2DE;
+  transform: translate3d(0, 10px, 0);
+  transition: all 0.3s ease-in-out;
 }

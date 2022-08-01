@@ -15,7 +15,7 @@ const AppRouter = () => {
             <Route path="/about" element={<About />} />
             <Route path="/turkey-list" element={<TurkeyList />} />
             <Route path="/turkey-map" element={<TurkeyMap />} />
-            <Route path="/turkey-map/:city" element={<WeatherInfo />} />
+            <Route path="/weather/:city" element={<WeatherInfo />} />
         </Routes>
     </Router>    
   )

@@ -5,7 +5,7 @@ import AppRouter from './router/AppRouter';
 function App() {
   
   return (
-    <div className='container-fluid'>
+    <div className='w-100' style={{backgroundColor:"#025259",height:"100vh"}}>
       <WeatherContextProvider>
       <AppRouter/>
     </WeatherContextProvider>
