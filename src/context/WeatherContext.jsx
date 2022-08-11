@@ -8,7 +8,7 @@ const WeatherContextProvider = ({ children }) => {
     
 
     const getWeather = async (city) => {
-        const apiKey="4d8fb5b93d4af21d66a2948710284366"
+        const apiKey=process.env.REACT_APP_apiKey
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=tr`);
         const data = await response.json();
         console.log(data);
