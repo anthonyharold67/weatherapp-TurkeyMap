@@ -1,11 +1,13 @@
-import React, { useContext} from 'react'
+import React, { useContext, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { WeatherContext } from '../context/WeatherContext'
 
 const Home = () => {
   const navigate = useNavigate()
   const {weather} = useContext(WeatherContext)
- 
+  useEffect(() => {
+    document.title="Weather App - Home"
+  }, [])
   // console.log(weather.wind);
   if(!weather.wind){
     return (

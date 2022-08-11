@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useEffect } from 'react'
 import TurkeyMap from 'turkey-map-react';
 import { WeatherContext } from '../context/WeatherContext';
 import Tooltip from '@mui/material/Tooltip';
@@ -15,6 +15,10 @@ const TurkeyMaps = () => {
         getWeather(name);
         navigate(`/weather/${name.toLowerCase()}`);
     }
+    useEffect(() => {
+      document.title="Weather App | Turkey Map"
+    }, [])
+    
     const renderCity = (cityComponent, cityData) => ( 
         <Tooltip title={cityData.name} key={cityData.id}> 
             {cityComponent} 
